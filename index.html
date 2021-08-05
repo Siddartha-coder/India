@@ -1,15 +1,377 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Sidebar Dashboard Template With Sub Menu</title>
-        
-        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<html>
+<head>
+  <link rel="icon" href="https://imgr.search.brave.com/WRZ1B-ak-EEapMOzkaccc4Mm49xdlvgGOZcYnuosJH0/fit/854/225/no/1/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/ZWt4aEIyWk9fbHJt/S2hyT2R1QzJBSGFF/SCZwaWQ9QXBp">
+  <title>India</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
-    </head>
-    <body>
-        Need coffee
-    </body>
-</html>
+</head>
+<body>
+  <style>
+    body::-webkit-scrollbar{
+      width: 10px;
+    }
+    body::-webkit-scrollbar-track{
+      background: rgb(17, 24, 39);
+    }
+    body::-webkit-scrollbar-thumb{
+      background: rgba(255, 255, 255, 0.445);
+      border-radius: 15%;
+    }
+    .header{
+  z-index: -1;
+  
+}
+
+.head-title{
+  position: relative;
+  top: 5px;
+  left: 45%;
+  font-size: 45px;
+  color: blueviolet;
+}
+
+.title{
+  position: absolute;
+  top: 5px;
+  font-size: 36px;
+  left: 60px;
+  font-family: "Roboto", sans-serif;
+}
+
+.Greatest{
+  display: none;
+}
+
+.sidebar {
+  border-top-right-radius: 9%;
+  border-bottom-right-radius: 9%;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.item{
+  width: 250px;
+  overflow: hidden;
+}
+
+.menu-btn{
+  display: block;
+  color: #fff;
+  position: relative;
+  padding: 25px 20px;
+  transition: 0.3s;
+  transition-property: color;
+}
+
+.menu-btn:hover{
+  color: #4CCEE8;
+}
+
+.menu-btn i{
+  margin-right: 20px;
+}
+
+.closebtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  position: relative;
+  top: -60px;
+  left: 0px;
+}
+
+.closebtn:hover {
+  background-color: #444;
+}
+
+#closebutton {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+.titleimg{
+  position: relative;
+  top: -20px;
+  left: 15px;
+}
+  </style>
+</head>
+<body>
+<div>
+<p class="Greatest">Made By Shaunak and Siddartha</p>
+<div class="header">
+<div class="header-menu" id="background">
+  <button class="openbtn" onclick="openNav()">☰</button>
+  <span class="ml-3 text-xl center head-title">India</span>
+</div>
+</div>
+
+<div id="mySidebar" class="sidebar">
+<button class="closebtn" onclick="closeNav()">☰</button>
+<div class="sidebar-menu">
+  <center class="profile">
+      <img style="height: 150px;width: 150px;border-radius: 50%;" src="https://imgr.search.brave.com/WRZ1B-ak-EEapMOzkaccc4Mm49xdlvgGOZcYnuosJH0/fit/854/225/no/1/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/ZWt4aEIyWk9fbHJt/S2hyT2R1QzJBSGFF/SCZwaWQ9QXBp" alt="">
+      
+  </center>
+  <span class="item">
+      <a href="dev.html" class="menu-btn">
+        </i><span>Developers</span>
+      </a>
+  </span>
+  <span class="item" id="profile">
+      <a href="geo.html" class="menu-btn">
+          <span>Geography</span>
+      </a>
+     
+  </span>
+  <span class="item" id="messages">
+      <a href="history.html" class="menu-btn">
+        <span>History</span>
+      </a>
+      
+  </span>
+  <span class="item" id="messages">
+    <a href="About.html" class="menu-btn">
+      <span>About India</span>
+    </a>
+    <span class="item" id="messages">
+      <a href="indep.html" class="menu-btn">
+        <span>Independence</span>
+      </a>
+      <span class="item" id="messages">
+        <a href="culture.html" class="menu-btn">
+          <span>Culture</span>
+        </a>
+        <span class="item" id="messages">
+          <a href="torch.html" class="menu-btn">
+            <span>Torchbearers</span>
+          </a>
+          <span class="item" id="messages">
+            <a href="sub.html" class="menu-btn">
+              <span>Subcontinent</span>
+            </a>
+            
+        </span>
+          
+      </span>
+        
+    </span>
+      
+  </span>
+    
+</span>
+</div>
+</div>
+</div>
+
+
+<script>
+
+var i = 0;
+function change() {
+var doc = document.getElementById("background");
+var color = ["orange", "white", "green"];
+doc.style.backgroundColor = color[i];
+i = (i + 1) % color.length;
+}
+setInterval(change, 1000);
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+  
+        
+      </button>
+    </div>
+    <!--1st-->
+    <section class="text-gray-400 bg-gray-900 body-font">
+      <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+        <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="https://imgr.search.brave.com/KjGO52WOq2Xs6VkTty4V68mJnJVmOY-2jX6PmPf0-rE/fit/713/225/no/1/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5W/Q2E1Y0NGNjRadTBK/UG1aTXJIRnB3SGFF/NyZwaWQ9QXBp">
+        <div class="text-center lg:w-2/3 w-full">
+          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">The World's Fastest developing country</h1>
+          <p class="leading-relaxed mb-8">India is known for diversity in the region, diversity in languages, diversity in food, diversity in clothing, diversity in the festival, diversity in states, diversity in everything that represents the world. country and its people. India is a country of the republic that is for the people, by the people and by the people. People run their county, people choose their own leader, and people are independent of everything. India is a country where people are changed according to their location. Each state has its incredible beauty of heritage as well as the nation. Each state has its own history of religion.
+  
+          </p>
+          
+          
+        </div>
+      </div>
+    </section>
+ <!--Write content-->
+ <section class="text-gray-400 bg-gray-900 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap -m-4">
+      <div class="p-4 md:w-1/3">
+        <div class="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
+          <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="data:image/jpeg;base64,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" alt="blog">
+          <div class="p-6">
+            
+            <h1 class="title-font text-lg font-medium text-white mb-3">Diversity in Religion</h1>
+            <p class="leading-relaxed mb-3">The majority of Asian Indians practice the Hinduism. The other major regions are Sikhism, Buddhism, Jainism, Christianity and Islam; and a small percentage of population practice Judaism, Zoroastrianism, and Baha’I’ Faith.</p>
+            <div class="flex items-center flex-wrap ">
+              
+              
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/3">
+        <div class="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
+          <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://diplomatist.com/wp-content/uploads/2020/10/india.jpeg" alt="blog">
+          <div class="p-6">
+
+            <h1 class="title-font text-lg font-medium text-white mb-3">Culture</h1>
+            <p class="leading-relaxed mb-3">Indian culture is the heritage of social norms, ethical values, traditional customs, belief systems, political systems, artifacts and technologies that originated in or are associated with the Indian subcontinent. </p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/3">
+        <div class="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
+          <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://miro.medium.com/max/753/0*xu0x75mNS5uZYYfm" alt="blog">
+          <div class="p-6">
+           
+            <h1 class="title-font text-lg font-medium text-white mb-3">Zero</h1>
+            <p class="leading-relaxed mb-3">Aryabhatta invented zero that means he thought that some number like zero exists and one can represent Ten as Symbol of one as ten digit and Symbol of zero as unit digit.</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="text-gray-400 bg-gray-900 body-font">
+  <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+    <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+        <img src="https://imgr.search.brave.com/WRZ1B-ak-EEapMOzkaccc4Mm49xdlvgGOZcYnuosJH0/fit/854/225/no/1/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/ZWt4aEIyWk9fbHJt/S2hyT2R1QzJBSGFF/SCZwaWQ9QXBp" alt="" style="border-radius: 25px;width: 50px;height: 50px;">
+
+        <span class="ml-3 text-xl">India15</span>
+      </a>
+      <p class="mt-2 text-sm text-gray-500">Made with 💖for India by 4 10th grade Programmers</p>
+    </div>
+    <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+      
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-400 hover:text-white">Home</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">About India</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">Geography</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">History</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-400 hover:text-white">Subcontinent</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">Torchbearers</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">Culture</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">Independence</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">Developers</a>
+          </li>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="bg-gray-800 bg-opacity-75">
+    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+      <p class="text-gray-400 text-sm text-center sm:text-left">© 2021 - India15
+        <a href="https://github.com/India15/india" rel="noopener noreferrer" class="text-gray-500 ml-1" target="_blank">@Siddartha</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+        <a class="text-gray-400">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-400">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-400">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24" data-darkreader-inline-fill="" data-darkreader-inline-stroke="" style="--darkreader-inline-fill:none; --darkreader-inline-stroke:currentColor;">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-400">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24" data-darkreader-inline-fill="" data-darkreader-inline-stroke="" style="--darkreader-inline-fill:currentColor; --darkreader-inline-stroke:currentColor;">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:none;"></path>
+            <circle cx="4" cy="4" r="2" stroke="none" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:none;"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </div>
+</footer>
+  
+</body>
+</html> 
