@@ -1,47 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-  <title>Document</title>
-</head>
-<body>
-  
-  <header class="text-gray-400 bg-gray-900 body-font">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-      <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-       <img style="width: 50px;height: 50px;border-radius: 25px;" src="https://imgr.search.brave.com/mMAQYNl_3ny8sZg1LFeLAuOWpjNWS5CFWX3ROZ0ZyKI/fit/670/225/no/1/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC45/WXRBc2FubEZNQlUz/UG9JbWx0SnB3SGFG/UCZwaWQ9QXBp">
-        <span class="ml-3 text-xl">India</span>
-      </a>
-      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-        <a class="mr-5 hover:text-white">First Link</a>
-        <a class="mr-5 hover:text-white">Second Link</a>
-        <a class="mr-5 hover:text-white">Third Link</a>
-        <a class="mr-5 hover:text-white">Fourth Link</a>
-      </nav>
-      <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Button
-        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-          <path d="M5 12h14M12 5l7 7-7 7"></path>
-        </svg>
-      </button>
-    </div>
-  </header>
-  <section class="text-gray-400 bg-gray-900 body-font">
-    <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-      <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="https://imgr.search.brave.com/KjGO52WOq2Xs6VkTty4V68mJnJVmOY-2jX6PmPf0-rE/fit/713/225/no/1/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5W/Q2E1Y0NGNjRadTBK/UG1aTXJIRnB3SGFF/NyZwaWQ9QXBp">
-      <div class="text-center lg:w-2/3 w-full">
-        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">The World's best developing country</h1>
-        <p class="leading-relaxed mb-8">India is known for diversity in the region, diversity in languages, diversity in food, diversity in clothing, diversity in the festival, diversity in states, diversity in everything that represents the world. country and its people. India is a country of the republic that is for the people, by the people and by the people. People run their county, people choose their own leader, and people are independent of everything. India is a country where people are changed according to their location. Each state has its incredible beauty of heritage as well as the nation. Each state has its own history of religion.
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Sidebar Dashboard Template With Sub Menu</title>
+        
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
-        </p>
-        <div class="flex justify-center">
-          <button class="inline-flex text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg">Button</button>
-          <button class="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">Button</button>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <style>*{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+          }
+          
+          body{
+            background: #fff;
+          }
+          
+          .wrapper .header{
+            z-index: 1;
+            background: #22242A;
+            position: fixed;
+            width: calc(100% - 0%);
+            height: 70px;
+            display: flex;
+            top: 0;
+          }
+          
+          .wrapper .header .header-menu{
+            width: calc(100% - 0%);
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+          }
+          
+          .wrapper .header .header-menu .title{
+            color: #fff;
+            font-size: 25px;
+            text-transform: uppercase;
+            font-weight: 900;
+          }
+          
+          .wrapper .header .header-menu .title span{
+            color: #4CCEE8;
+          }
+          
+          .wrapper .header .header-menu .sidebar-btn{
+            color: #fff;
+            position: absolute;
+            margin-left: 240px;
+            font-size: 22px;
+            font-weight: 900;
+            cursor: pointer;
+            transition: 0.3s;
+            transition-property: color;
+          }
+          
+          .wrapper .header .header-menu .sidebar-btn:hover{
+            color: #4CCEE8;
+          }
+          
+          .wrapper .header .header-menu ul{
+            display: flex;
+          }
+          
+          .wrapper .header .header-menu ul li a{
+            background: #fff;
+            color: #000;
+            display: block;
+            margin: 0 10px;
+            font-size: 18px;
+            width: 34px;
+            height: 34px;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 50%;
+            transition: 0.3s;
+            transition-property: background, color;
+          }
+          
+          .wrapper .header .header-menu ul li a:hover{
+            background: #4CCEE8;
+            color: #fff;
+          }
+          
+          .wrapper .sidebar{
+            z-index: 1;
+            background: #2F323A;
+            position: fixed;
+            top: 70px;
+            width: 250px;
+            height: calc(100% - 9%);
+            transition: 0.3s;
+            transition-property: width;
+            overflow-y: auto;
+          }
+          
+          .wrapper .sidebar .sidebar-menu{
+            overflow: hidden;
+          }
+          
+          .wrapper .sidebar .sidebar-menu .profile img{
+            margin: 20px 0;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+          }
+          
+          .wrapper .sidebar .sidebar-menu .profile p{
+            color: #bbb;
+            font-weight: 700;
+            margin-bottom: 10px;
+          }
+          
+          .wrapper .sidebar .sidebar-menu .item{
+            width: 250px;
+            overflow: hidden;
+          }
+          
+          .wrapper .sidebar .sidebar-menu .item .menu-btn{
+            display: block;
+            color: #fff;
+            position: relative;
+            padding: 25px 20px;
+            transition: 0.3s;
+            transition-property: color;
+          }
+          
+          .wrapper .sidebar .sidebar-menu .item .menu-btn:hover{
+            color: #4CCEE8;
+          }
+          
+          .wrapper .sidebar .sidebar-menu .item .menu-btn i{
+            margin-right: 20px;
+          }
+          
+          .wrapper .sidebar .sidebar-menu .item .menu-btn .drop-down{
+            float: right;
+            font-size: 12px;
+            margin-top: 3px;
+          }
+          
+          .wrapper .sidebar .sidebar-menu .item .sub-menu{
+            background: #3498DB;
+            overflow: hidden;
+            max-height: 0;
+            transition: 0.3s;
+            transition-property: background, max-height;
+          }
+          
+          .wrapper .sidebar .sidebar-menu .item .sub-menu a{
+            display: block;
+            position: relative;
+            color: #fff;
+            white-space: nowrap;
+            font-size: 15px;
+            padding: 20px;
+            transition: 0.3s;
+            transition-property: background;
+          }
+          
+          .wrapper .sidebar .sidebar-menu .item .sub-menu a:hover{
+            background: #55B1F0;
+          }
+          
+          .wrapper .sidebar .sidebar-menu .item .sub-menu a:not(last-child){
+            border-bottom: 1px solid #8FC5E9;
+          }
+          
+          .wrapper .sidebar .sidebar-menu .item .sub-menu i{
+            padding-right: 20px;
+            font-size: 10px;
+          }
+          
+          .wrapper .sidebar .sidebar-menu .item:target .sub-menu{
+            max-height: 500px;
+          }
+          
+          .wrapper .main-container{
+            width: (100% - 250px);
+            margin-top: 70px;
+            margin-left: 250px;
+            padding: 15px;
+            background: url(background.jpg)no-repeat;
+            background-size: cover;
+            height: 100vh;
+            transition: 0.3s;
+          }
+          
+          .wrapper.collapse .sidebar{
+            width: 70px;
+          }
+          
+          .wrapper.collapse .sidebar .profile img,
+          .wrapper.collapse .sidebar .profile p,
+          .wrapper.collapse .sidebar a span{
+            display: none;
+          }
+          
+          .wrapper.collapse .sidebar .sidebar-menu .item .menu-btn{
+            font-size: 23px;
+          }
+          
+          .wrapper.collapse .sidebar .sidebar-menu .item .sub-menu i{
+            font-size: 18px;
+            padding-left: 3px;
+          }
+          
+          .wrapper.collapse .main-container{
+            width: calc(100% - 70px);
+            margin-left: 70px;
+          }
+          
+          .wrapper .main-container .card{
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            font-size: 14px;
+          }
+                </style>
+
+        <!--wrapper start-->
+        <div class="wrapper">
+            <!--header menu start-->
+            <div class="header">
+                <div class="header-menu">
+                    <div class="title">India <span></span></div>
+                    <img src="https://imgr.search.brave.com/WRZ1B-ak-EEapMOzkaccc4Mm49xdlvgGOZcYnuosJH0/fit/854/225/no/1/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/ZWt4aEIyWk9fbHJt/S2hyT2R1QzJBSGFF/SCZwaWQ9QXBp" alt="" style="border-radius: 25px;width: 50px;height: 50px;">
+                    <div class="sidebar-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <!--header menu end-->
+            <!--sidebar start-->
+            <div class="sidebar">
+                <div class="sidebar-menu">
+                    <center class="profile">
+                        <img style="height: 50px;width: 50px;border-radius: 25px;" src="https://imgr.search.brave.com/WRZ1B-ak-EEapMOzkaccc4Mm49xdlvgGOZcYnuosJH0/fit/854/225/no/1/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/ZWt4aEIyWk9fbHJt/S2hyT2R1QzJBSGFF/SCZwaWQ9QXBp" alt="">
+                        
+                    </center>
+                    <li class="item">
+                        <a href="about.html" class="menu-btn">
+                          <i class="far fa-address-card"></i><span>About</span>
+                        </a>
+                    </li>
+                    <li class="item" id="profile">
+                        <a href="geo.html" class="menu-btn">
+                            <<i class="fas fa-globe-stand"></i><span>Geography <i class="fas fa-chevron-down drop-down"></i></span>
+                        </a>
+                       
+                    </li>
+                    <li class="item" id="messages">
+                        <a href="history.html" class="menu-btn">
+                          <i class="fas fa-history"></i>><span>History <i class="fas fa-chevron-down drop-down"></i></span>
+                        </a>
+                        
+                    </li>
+                    <li class="item" id="settings">
+                        <a href="#settings" class="menu-btn">
+                            <i class="fas fa-cog"></i><span>Settings <i class="fas fa-chevron-down drop-down"></i></span>
+                        </a>
+                        <div class="sub-menu">
+                            <a href="#"><i class="fas fa-lock"></i><span>Password</span></a>
+                            <a href="#"><i class="fas fa-language"></i><span>Language</span></a>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="menu-btn">
+                            <i class="fas fa-info-circle"></i><span>About</span>
+                        </a>
+                    </li>
+                </div>
+            </div>
+            <!--sidebar end-->
+            <section class="text-gray-400 bg-gray-900 body-font">
+              <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+                <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="https://imgr.search.brave.com/KjGO52WOq2Xs6VkTty4V68mJnJVmOY-2jX6PmPf0-rE/fit/713/225/no/1/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5W/Q2E1Y0NGNjRadTBK/UG1aTXJIRnB3SGFF/NyZwaWQ9QXBp">
+                <div class="text-center lg:w-2/3 w-full">
+                  <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">The World's best developing country</h1>
+                  <p class="leading-relaxed mb-8">India is known for diversity in the region, diversity in languages, diversity in food, diversity in clothing, diversity in the festival, diversity in states, diversity in everything that represents the world. country and its people. India is a country of the republic that is for the people, by the people and by the people. People run their county, people choose their own leader, and people are independent of everything. India is a country where people are changed according to their location. Each state has its incredible beauty of heritage as well as the nation. Each state has its own history of religion.
+          
+                  </p>
+                  <div class="flex justify-center">
+                    <button class="inline-flex text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg">Button</button>
+                    <button class="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">Button</button>
+                  </div>
+                </div>
+              </div>
+            </section>
         </div>
-      </div>
-    </div>
-  </section>
-</body>
+        <!--wrapper end-->
+
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $(".sidebar-btn").click(function(){
+                $(".wrapper").toggleClass("collapse");
+            });
+        });
+        </script>
+
+    </body>
 </html>
+      
