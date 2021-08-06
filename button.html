@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+ <style>
+ button{
+            width: 150px;
+            height: 80px;
+            color: blueviolet;
+            border: none;
+            background-color: transparent;
+            margin: 20px;
+            cursor: pointer;
+            font-size: 1.5em;
+}
+        #eigth{
+            position: relative;
+            transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition-duration: 0.4s;
+        }
+
+        #eigth::after{
+            content: '';
+            position: absolute;
+            background-color: blueviolet;
+            width: 0%;
+            height: 0%;
+            top:45%;
+            left: 45%;
+            transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition-duration: 0.4s;
+            z-index: -1;
+            border-radius:50%;
+        }
+        #eigth:hover::after{
+            width: 100%;
+            height: 100%;
+            top: 0%;
+            left: 0;
+            border-radius: 0;
+        }
+        #eigth:hover{
+            color: #fff;
+        }
+</style>
+<button id="eigth">Hover</button>
+</body>
+</html>
