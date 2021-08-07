@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://imgr.search.brave.com/WRZ1B-ak-EEapMOzkaccc4Mm49xdlvgGOZcYnuosJH0/fit/854/225/no/1/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/ZWt4aEIyWk9fbHJt/S2hyT2R1QzJBSGFF/SCZwaWQ9QXBp">
+    <title>India</title>
+      <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+</head>
+<body>
+    <style>
+        body::-webkit-scrollbar{
+          width: 10px;
+        }
+        body::-webkit-scrollbar-track{
+          background: rgb(17, 24, 39);
+        }
+        body::-webkit-scrollbar-thumb{
+          background: rgba(255, 255, 255, 0.445);
+          border-radius: 15%;
+        }
+        .header{
+      z-index: -1;
+      
+    }
+    
+    .head-title{
+      position: relative;
+      top: 5px;
+      left: 45%;
+      font-size: 45px;
+      color: blueviolet;
+    }
+    
+    .title{
+      position: absolute;
+      top: 5px;
+      font-size: 36px;
+      left: 40px;
+      font-family: "Roboto", sans-serif;
+    }
+    
+    .Greatest{
+      display: none;
+    }
+    
+    .sidebar {
+      border-top-right-radius: 9%;
+      border-bottom-right-radius: 9%;
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+    
+    .sidebar a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    .sidebar a:hover {
+      color: #f1f1f1;
+    }
+    
+    .openbtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: #111;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+    }
+    
+    
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+      .sidebar {padding-top: 15px;}
+      .sidebar a {font-size: 18px;}
+    }
+    
+    .item{
+      width: 250px;
+      overflow: hidden;
+    }
+    
+    .menu-btn{
+      display: block;
+      color: #fff;
+      position: relative;
+      padding: 25px 20px;
+      transition: 0.3s;
+      transition-property: color;
+    }
+    
+    .menu-btn:hover{
+      color: #4CCEE8;
+    }
+    
+    .menu-btn i{
+      margin-right: 20px;
+    }
+    .shaunclass{
+        align-items: center;
+        color: cyan;
+    }
+    .closebtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: #111;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      position: relative;
+      top: -60px;
+      left: 0px;
+    }
+    
+    .closebtn:hover {
+      background-color: #444;
+    }
+    
+    #closebutton {
+      transition: margin-left .5s;
+      padding: 16px;
+    }
+    .titleimg{
+      position: relative;
+      top: -20px;
+      left: 15px;
+    }
+      </style>
+    
+    <div>
+    <div class="header">
+    <div class="header-menu" id="background">
+      <button class="openbtn" onclick="openNav()">☰</button>
+      <span class="ml-3 text-xl center shaunclass">About India</span>
+    </div>
+    </div>
+    
+    <div id="mySidebar" class="sidebar">
+    <button class="closebtn" onclick="closeNav()">☰</button>
+    <div class="sidebar-menu">
+      <center class="profile">
+          <img style="height: 150px;width: 150px;border-radius: 50%;" src="https://imgr.search.brave.com/WRZ1B-ak-EEapMOzkaccc4Mm49xdlvgGOZcYnuosJH0/fit/854/225/no/1/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/ZWt4aEIyWk9fbHJt/S2hyT2R1QzJBSGFF/SCZwaWQ9QXBp" alt="">
+          
+      </center>
+      <span class="item">
+        <a href="index.html" class="menu-btn">
+          </i><span>Home</span>
+        </a>
+    </span>
+      <span class="item">
+          <a href="dev.html" class="menu-btn">
+            </i><span>Developers</span>
+          </a>
+      </span>
+      <span class="item" id="profile">
+          <a href="geo.html" class="menu-btn">
+              <span>Geography</span>
+          </a>
+         
+      </span>
+      <span class="item" id="messages">
+          <a href="history.html" class="menu-btn">
+            <span>History</span>
+          </a>
+          
+      </span>
+      <span class="item" id="messages">
+        <a href="About.html" class="menu-btn">
+          <span>About India</span>
+        </a>
+        <span class="item" id="messages">
+          <a href="indep.html" class="menu-btn">
+            <span>Independence</span>
+          </a>
+          <span class="item" id="messages">
+            <a href="culture.html" class="menu-btn">
+              <span>Culture</span>
+            </a>
+            <span class="item" id="messages">
+              <a href="torch.html" class="menu-btn">
+                <span>Torchbearers</span>
+              </a>
+              <span class="item" id="messages">
+                <a href="sub.html" class="menu-btn">
+                  <span>Subcontinent</span>
+                </a>
+                
+            </span>
+              
+          </span>
+            
+        </span>
+          
+      </span>
+        
+    </span>
+    </div>
+    </div>
+    </div>
+    
+    
+    <script>
+    
+    var i = 0;
+    function change() {
+    var doc = document.getElementById("background");
+    var color = ["orange", "white", "green"];
+    doc.style.backgroundColor = color[i];
+    i = (i + 1) % color.length;
+    }
+    setInterval(change, 1000);
+    
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+    </script>
+
+<section class="text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col">
+        <div class="h-1 bg-gray-800 rounded overflow-hidden">
+          <div class="w-24 h-full bg-indigo-500"></div>
+        </div>
+        <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+          <h1 style="text-align: center;" class="sm:w-2/5 text-white font-medium title-font text-2xl mb-2 sm:mb-0">Who does'nt know about India??</h1><br>
+          <img src="https://imgr.search.brave.com/wZl31VikrLE9oDDr-Rd2HLJ7cElhQ91uzIhdF1_BZuE/fit/666/225/no/1/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC42/N3BkSHQtR2l4U0R4/LWU5TkFpLWVBSGFG/UiZwaWQ9QXBp" height="500" width="550" style="left: 15px;top: 100px;">
+          <br>
+          <br>
+          <br>
+          <p style="left: 150px;" class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">India, officially the Republic of India (Hindi: Bhārat Gaṇarājya), is a country in South Asia. It is the second-most populous country, the seventh-largest country by land area, and the most populous democracy in the world. Bounded by the Indian Ocean on the south, the Arabian Sea on the southwest, and the Bay of Bengal on the southeast, it shares land borders with Pakistan to the west; China, Nepal, and Bhutan to the north; and Bangladesh and Myanmar to the east. In the Indian Ocean, India is in the vicinity of Sri Lanka and the Maldives; its Andaman and Nicobar Islands share a maritime border with Thailand, Myanmar and Indonesia.
+
+            Modern humans arrived on the Indian subcontinent from Africa no later than 55,000 years ago. Their long occupation, initially in varying forms of isolation as hunter-gatherers, has made the region highly diverse, second only to Africa in human genetic diversity. Settled life emerged on the subcontinent in the western margins of the Indus river basin 9,000 years ago, evolving gradually into the Indus Valley Civilisation of the third millennium BCE. By 1200 BCE, an archaic form of Sanskrit, an Indo-European language, had diffused into India from the northwest,unfolding as the language of the Rigveda, and recording the dawning of Hinduism in India. The Dravidian languages of India were supplanted in the northern and western regions. By 400 BCE, stratification and exclusion by caste had emerged within Hinduism, and Buddhism and Jainism had arisen, proclaiming social orders unlinked to heredity. Early political consolidations gave rise to the loose-knit Maurya and Gupta Empires based in the Ganges Basin. Their collective era was suffused with wide-ranging creativity, but also marked by the declining status of women, and the incorporation of untouchability into an organised system of belief. In South India, the Middle kingdoms exported Dravidian-languages scripts and religious cultures to the kingdoms of Southeast Asia.</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+        <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+          <div class="rounded-lg h-64 overflow-hidden">
+            <img alt="content" class="object-cover object-center h-full w-full" src="https://imgr.search.brave.com/taQ6h4Zfo4H17IEg_QZTL3UAgc9BQohe_v-jPq7a_Lc/fit/759/225/no/1/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5s/Wk9IQ3YycFp4dmpJ/eFJ6TFpTdTdRSGFF/byZwaWQ9QXBp">
+          </div>
+          <h2 class="text-xl font-medium title-font text-white mt-5">India Gate</h2>
+          <p class="text-base leading-relaxed mt-2">The India Gate (formerly known as the All India War Memorial) is a war memorial located astride the Rajpath, on the eastern edge of the "ceremonial axis" of New Delhi, formerly called Kingsway.</p>
+          
+        </div>
+        <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+          <div class="rounded-lg h-64 overflow-hidden">
+            <img alt="content" class="object-cover object-center h-full w-full" src="https://imgr.search.brave.com/GWbBgji1M3vu9wAHem9iX1kCiOfC8Jr17g-e1qdjIcM/fit/711/225/no/1/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5Q/aUx1ai0yYlNnSnZi/eEMtNlF5d3BRSGFF/OCZwaWQ9QXBp">
+          </div>
+          <h2 class="text-xl font-medium title-font text-white mt-5">THe Golden Temple</h2>
+          <p class="text-base leading-relaxed mt-2">Golden Temple, the chief gurdwara, or house of worship, of Sikhism and the Sikhs’ most important pilgrimage site. It is located in the city of Amritsar, Punjab state, northwestern India.</p>
+         
+        </div>
+        <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+          <div class="rounded-lg h-64 overflow-hidden">
+            <img alt="content" class="object-cover object-center h-full w-full" src="https://imgr.search.brave.com/T6bYW89UGypsIbDAsezmZDjZFqJdRliIe3iMFUvlFUU/fit/668/225/no/1/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC4t/ZWVla3l1YXE0Ul9G/U2hCSk5mdGdnSGFG/USZwaWQ9QXBp">
+          </div>
+          <h2 class="text-xl font-medium title-font text-white mt-5">The Ramappa</h2>
+          <p class="text-base leading-relaxed mt-2">Rudreswara Temple also known as Ramappa temple, located at Palampet, Mulugu district, near Warangal in the state of Telangana has made it to UNESCO’s World Heritage list. The decision was taken at the 44th session of the World Heritage Committee of UNESCO held on Sunday in China.</p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<footer class="text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+          <img src="https://imgr.search.brave.com/WRZ1B-ak-EEapMOzkaccc4Mm49xdlvgGOZcYnuosJH0/fit/854/225/no/1/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/ZWt4aEIyWk9fbHJt/S2hyT2R1QzJBSGFF/SCZwaWQ9QXBp" alt="" style="border-radius: 25px;width: 50px;height: 50px;">
+  
+          <span class="ml-3 text-xl">India15</span>
+        </a>
+        <p class="mt-2 text-sm text-gray-500">Made with 💖for India by 4 10th grade Programmers</p>
+      </div>
+      <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+        
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+  
+          <nav class="list-none mb-10">
+            <li>
+              <a href="index.html" class="text-gray-400 hover:text-white">Home</a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-white">About India</a>
+            </li>
+            <li>
+              <a href="geo.html" class="text-gray-400 hover:text-white">Geography</a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-white">History</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-gray-400 hover:text-white">Subcontinent</a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-white">Torchbearers</a>
+            </li>
+            <li>
+              <a href="culture.html" class="text-gray-400 hover:text-white">Culture</a>
+            </li>
+            <li>
+              <a class="text-gray-400 hover:text-white">Independence</a>
+            </li>
+            <li>
+              <a href="dev.html" class="text-gray-400 hover:text-white">Developers</a>
+            </li>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-800 bg-opacity-75">
+      <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+        <p class="text-gray-400 text-sm text-center sm:text-left">© 2021 - India15
+          <a href="https://github.com/India15/india" rel="noopener noreferrer" class="text-gray-500 ml-1" target="_blank">@Siddartha</a>
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+          <a class="text-gray-400">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-400">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-400">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24" data-darkreader-inline-fill="" data-darkreader-inline-stroke="" style="--darkreader-inline-fill:none; --darkreader-inline-stroke:currentColor;">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-400">
+            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24" data-darkreader-inline-fill="" data-darkreader-inline-stroke="" style="--darkreader-inline-fill:currentColor; --darkreader-inline-stroke:currentColor;">
+              <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:none;"></path>
+              <circle cx="4" cy="4" r="2" stroke="none" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:none;"></circle>
+            </svg>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html> 
