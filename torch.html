@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://imgr.search.brave.com/WRZ1B-ak-EEapMOzkaccc4Mm49xdlvgGOZcYnuosJH0/fit/854/225/no/1/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/ZWt4aEIyWk9fbHJt/S2hyT2R1QzJBSGFF/SCZwaWQ9QXBp">
+    <title>India</title>
+      <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+</head>
+<body>
+    <style>
+        body::-webkit-scrollbar{
+          width: 10px;
+        }
+        body::-webkit-scrollbar-track{
+          background: rgb(17, 24, 39);
+        }
+        body::-webkit-scrollbar-thumb{
+          background: rgba(255, 255, 255, 0.445);
+          border-radius: 15%;
+        }
+        .header{
+      z-index: -1;
+      
+    }
+    
+    .head-title{
+      position: relative;
+      top: 5px;
+      left: 45%;
+      font-size: 45px;
+      color: blueviolet;
+    }
+    
+    .title{
+      position: absolute;
+      top: 5px;
+      font-size: 36px;
+      left: 40px;
+      font-family: "Roboto", sans-serif;
+    }
+    
+    .Greatest{
+      display: none;
+    }
+    
+    .sidebar {
+      border-top-right-radius: 9%;
+      border-bottom-right-radius: 9%;
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+    
+    .sidebar a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    .sidebar a:hover {
+      color: #f1f1f1;
+    }
+    
+    .openbtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: #111;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+    }
+    
+    
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+      .sidebar {padding-top: 15px;}
+      .sidebar a {font-size: 18px;}
+    }
+    
+    .item{
+      width: 250px;
+      overflow: hidden;
+    }
+    
+    .menu-btn{
+      display: block;
+      color: #fff;
+      position: relative;
+      padding: 25px 20px;
+      transition: 0.3s;
+      transition-property: color;
+    }
+    
+    .menu-btn:hover{
+      color: #4CCEE8;
+    }
+    
+    .menu-btn i{
+      margin-right: 20px;
+    }
+    .shaunclass{
+        align-items: center;
+        color: cyan;
+    }
+    .closebtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: #111;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      position: relative;
+      top: -60px;
+      left: 0px;
+    }
+    
+    .closebtn:hover {
+      background-color: #444;
+    }
+    
+    #closebutton {
+      transition: margin-left .5s;
+      padding: 16px;
+    }
+    .titleimg{
+      position: relative;
+      top: -20px;
+      left: 15px;
+    }
+      </style>
+    
+    <div>
+    <div class="header">
+    <div class="header-menu" id="background">
+      <button class="openbtn" onclick="openNav()">☰</button>
+      <span class="ml-3 text-xl center shaunclass">Indian Torchbearers</span>
+    </div>
+    </div>
+    
+    <div id="mySidebar" class="sidebar">
+    <button class="closebtn" onclick="closeNav()">☰</button>
+    <div class="sidebar-menu">
+      <center class="profile">
+          <img style="height: 150px;width: 150px;border-radius: 50%;" src="https://imgr.search.brave.com/WRZ1B-ak-EEapMOzkaccc4Mm49xdlvgGOZcYnuosJH0/fit/854/225/no/1/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/ZWt4aEIyWk9fbHJt/S2hyT2R1QzJBSGFF/SCZwaWQ9QXBp" alt="">
+          
+      </center>
+      <span class="item">
+        <a href="index.html" class="menu-btn">
+          </i><span>Home</span>
+        </a>
+    </span>
+      <span class="item">
+          <a href="dev.html" class="menu-btn">
+            </i><span>Developers</span>
+          </a>
+      </span>
+      <span class="item" id="profile">
+          <a href="geo.html" class="menu-btn">
+              <span>Geography</span>
+          </a>
+         
+      </span>
+      <span class="item" id="messages">
+          <a href="history.html" class="menu-btn">
+            <span>History</span>
+          </a>
+          
+      </span>
+      <span class="item" id="messages">
+        <a href="About.html" class="menu-btn">
+          <span>About India</span>
+        </a>
+        <span class="item" id="messages">
+          <a href="indep.html" class="menu-btn">
+            <span>Independence</span>
+          </a>
+          <span class="item" id="messages">
+            <a href="culture.html" class="menu-btn">
+              <span>Culture</span>
+            </a>
+            <span class="item" id="messages">
+              <a href="torch.html" class="menu-btn">
+                <span>Torchbearers</span>
+              </a>
+              <span class="item" id="messages">
+                <a href="sub.html" class="menu-btn">
+                  <span>Subcontinent</span>
+                </a>
+                
+            </span>
+              
+          </span>
+            
+        </span>
+          
+      </span>
+        
+    </span>
+    </div>
+    </div>
+    </div>
+    
+    
+    <script>
+    
+    var i = 0;
+    function change() {
+    var doc = document.getElementById("background");
+    var color = ["orange", "white", "green"];
+    doc.style.backgroundColor = color[i];
+    i = (i + 1) % color.length;
+    }
+    setInterval(change, 1000);
+    
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+    </script>
+
+<section class="text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them.</p>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="p-4 lg:w-1/4 md:w-1/2">
+          <div class="h-full flex flex-col items-center text-center">
+            <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://imgr.search.brave.com/VMOSnhDvlP78Y0mEMR62K5wK1Q7bW2zEFWDJX0XM-pA/fit/905/225/no/1/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5q/dWNqakhCdGFON3ZL/NVBPR1NyeTNRSGFE/NCZwaWQ9QXBp">
+            <div class="w-full">
+              <h2 class="title-font font-medium text-lg text-white">Rani Laxmi Bhai</h2>
+              <h3 class="text-gray-500 mb-3">Female Freedom Fighter</h3>
+              <p class="mb-4">Lakshmi Bai, also spelled Laxmi Bai, born on November 19, 1835, Kashi, India, rani of Jhansi and a leader of the Indian Mutiny of 1857–58.</p>
+              <span class="inline-flex">
+                <a class="text-gray-700">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                  </svg>
+                </a>
+                <a class="ml-2 text-gray-700">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                  </svg>
+                </a>
+                <a class="ml-2 text-gray-700">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/4 md:w-1/2">
+          <div class="h-full flex flex-col items-center text-center">
+            <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://cdn.britannica.com/72/200572-050-448D5045/Mahatma-Gandhi-1930.jpg">
+            <div class="w-full">
+              <h2 class="title-font font-medium text-lg text-white">Mahatma Gandhi</h2>
+              <h3 class="text-gray-500 mb-3">Father of Nation</h3>
+              <p class="mb-4">Mahatma Gandhi, Indian lawyer, politician, social activist, and writer who became the leader of the nationalist movement against the British rule of India. </p>
+              <span class="inline-flex">
+                <a class="text-gray-700">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                  </svg>
+                </a>
+                <a class="ml-2 text-gray-700">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                  </svg>
+                </a>
+                <a class="ml-2 text-gray-700">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/4 md:w-1/2">
+          <div class="h-full flex flex-col items-center text-center">
+            <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Subhas_Chandra_Bose_NRB.jpg/330px-Subhas_Chandra_Bose_NRB.jpg">
+            <div class="w-full">
+              <h2 class="title-font font-medium text-lg text-white">Subhas Chandra Bose</h2>
+              <h3 class="text-gray-500 mb-3">Revolutionary Fighter</h3>
+              <p class="mb-4">Subhas Chandra Bose Indian revolutionary prominent in the independence movement against British rule of India. He also led an Indian national force from abroad against the Western powers during World War II.</p>
+              <span class="inline-flex">
+                <a class="text-gray-700">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                  </svg>
+                </a>
+                <a class="ml-2 text-gray-700">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                  </svg>
+                </a>
+                <a class="ml-2 text-gray-700">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/4 md:w-1/2">
+          <div class="h-full flex flex-col items-center text-center">
+            <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://imgr.search.brave.com/U2YQItpSJiJLhKn3p6K54PMm9ZqC2dEWnCyPYNne4G8/fit/791/225/no/1/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5B/M0haTUdES2JnWS05/OElNcGNyMGF3SGFF/YyZwaWQ9QXBp">
+            <div class="w-full">
+              <h2 class="title-font font-medium text-lg text-white">Arvind Krishna</h2>
+              <h3 class="text-gray-500 mb-3">CEO of IBM</h3>
+              <p class="mb-4">Arvind Krishna is an Indian business executive serving as Chairman and CEO of IBM. He has been a inspiring figure for Indian Engineers</p>
+              <span class="inline-flex">
+                <a class="text-gray-700">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                  </svg>
+                </a>
+                <a class="ml-2 text-gray-700">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                  </svg>
+                </a>
+                <a class="ml-2 text-gray-700">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+          <img src="https://imgr.search.brave.com/WRZ1B-ak-EEapMOzkaccc4Mm49xdlvgGOZcYnuosJH0/fit/854/225/no/1/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5k/ZWt4aEIyWk9fbHJt/S2hyT2R1QzJBSGFF/SCZwaWQ9QXBp" alt="" style="border-radius: 25px;width: 50px;height: 50px;">
+  
+          <span class="ml-3 text-xl">India15</span>
+        </a>
+        <p class="mt-2 text-sm text-gray-500">Made with 💖for India by 4 10th grade Programmers</p>
+      </div>
+      <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+        
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+  
+          <nav class="list-none mb-10">
+            <li>
+              <a href="index.html" class="text-gray-400 hover:text-white">Home</a>
+            </li>
+            <li>
+              <a href="about.html" class="text-gray-400 hover:text-white">About India</a>
+            </li>
+            <li>
+              <a href="geo.html" class="text-gray-400 hover:text-white">Geography</a>
+            </li>
+            <li>
+              <a href="history.html" class="text-gray-400 hover:text-white">History</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <nav class="list-none mb-10">
+            <li>
+              <a href="subco.html" class="text-gray-400 hover:text-white">Subcontinent</a>
+            </li>
+            <li>
+              <a href="torch.html" class="text-gray-400 hover:text-white">Torchbearers</a>
+            </li>
+            <li>
+              <a href="culture.html" class="text-gray-400 hover:text-white">Culture</a>
+            </li>
+            <li>
+              <a href="indep.html" class="text-gray-400 hover:text-white">Independence</a>
+            </li>
+            <li>
+              <a href="dev.html" class="text-gray-400 hover:text-white">Developers</a>
+            </li>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-800 bg-opacity-75">
+      <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+        <p class="text-gray-400 text-sm text-center sm:text-left">© 2021 - India15
+          <a href="https://github.com/India15/india" rel="noopener noreferrer" class="text-gray-500 ml-1" target="_blank">@Siddartha</a>
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+          <a class="text-gray-400">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-400">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-400">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24" data-darkreader-inline-fill="" data-darkreader-inline-stroke="" style="--darkreader-inline-fill:none; --darkreader-inline-stroke:currentColor;">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-400">
+            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24" data-darkreader-inline-fill="" data-darkreader-inline-stroke="" style="--darkreader-inline-fill:currentColor; --darkreader-inline-stroke:currentColor;">
+              <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:none;"></path>
+              <circle cx="4" cy="4" r="2" stroke="none" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke:none;"></circle>
+            </svg>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html> 
