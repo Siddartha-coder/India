@@ -12,6 +12,53 @@
 </head>
 <body>
     <style>
+        .preloader {
+  animation: opacity 4s normal forwards;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  background: rgb(17, 24, 39);
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+.progress {
+  background: rgba(255,255,255,0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: fixed;
+  padding: 0 5px;
+  display: flex;
+  height: 45px;
+  width: 600px;
+}
+
+.progress-value {
+  animation: loading 4s normal forwards;
+  border-radius: 90px;
+  height: 60%;
+  width: 0;
+}
+
+@keyframes loading {
+  0% { width: 0; }
+  33.3% { width: 33.3%; background: rgb(255, 154, 48); }
+  66.6% { width: 66.6%; background: rgb(255, 255, 255); }
+  100% { width: 100%; background: rgb(10, 137, 1); }
+}
+
+@keyframes opacity {
+  33.3%{ opacity: 100%; }
+  66.6%{ opacity: 100%; }
+  80%{ opacity: 100%; }
+  100%{ opacity: 0; }
+}
         body::-webkit-scrollbar{
           width: 10px;
         }
@@ -41,10 +88,6 @@
       font-size: 36px;
       left: 60px;
       font-family: "Roboto", sans-serif;
-    }
-    
-    .Greatest{
-      display: none;
     }
     
     .sidebar {
@@ -142,7 +185,13 @@
     </head>
     <body>
     <div>
-    <p class="Greatest">Made By Shaunak and Siddartha</p>
+    <div class="preloader">
+    <div class="progress">
+    <div class="progress-value">
+    </div>
+    </div>
+    </div>
+    <div>
     <div class="header">
     <div class="header-menu" id="background">
       <button class="openbtn" onclick="openNav()">☰</button>
