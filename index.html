@@ -17,9 +17,11 @@
   position: fixed;
   height: 100%;
   width: 100%;
-  background: black;
+  pointer-events: none;
+  background: rgb(17, 24, 39);
   top: 0px;
-  left: 0px
+  left: 0px;
+  z-index: 1;
 }
 
 .progress {
@@ -51,7 +53,8 @@
 @keyframes opacity {
   33.3%{ opacity: 100%; }
   66.6%{ opacity: 100%; }
-  100%{ opacity: 0;}
+  80%{ opacity: 100%; }
+  100%{ opacity: 0; }
 }
     body::-webkit-scrollbar{
       width: 10px;
@@ -84,9 +87,6 @@
   font-family: "Roboto", sans-serif;
 }
 
-.Greatest{
-  display: none;
-}
 
 .sidebar {
   border-top-right-radius: 9%;
@@ -189,13 +189,12 @@
 </div>
 </div>
 <div>
-<p class="Greatest">Made By Shaunak and Siddartha</p>
-<div class="header">
-<div class="header-menu" id="background">
-  <button class="openbtn" onclick="openNav()">☰</button>
-  <span style="z-index=0" class="ml-3 text-xl center head-title">India</span>
-</div>
-</div>
+    <div class="header">
+    <div class="header-menu" id="background">
+      <button class="openbtn" onclick="openNav()">☰</button>
+      <span class="ml-3 text-xl head-title">India</span>
+    </div>
+    </div>
 
 <div id="mySidebar" class="sidebar">
 <button class="closebtn" onclick="closeNav()">☰</button>
@@ -265,15 +264,6 @@
 
 <script>
 
-var i = 0;
-function change() {
-var doc = document.getElementById("background");
-var color = ["orange", "white", "green"];
-doc.style.backgroundColor = color[i];
-i = (i + 1) % color.length;
-}
-setInterval(change, 1000);
-
 function openNav() {
   document.getElementById("mySidebar").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
@@ -283,6 +273,15 @@ function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
 }
+
+var i = 0;
+function change() {
+var doc = document.getElementById("background");
+var color = ["orange", "white", "green"];
+doc.style.backgroundColor = color[i];
+i = (i + 1) % color.length;
+}
+setInterval(change, 1000);
 </script>
 
   
